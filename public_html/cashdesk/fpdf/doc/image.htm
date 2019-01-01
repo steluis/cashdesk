@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Image</title>
+<link type="text/css" rel="stylesheet" href="../fpdf.css">
+</head>
+<body>
+<h1>Image</h1>
+<code>Image(<b>string</b> file [, <b>float</b> x [, <b>float</b> y [, <b>float</b> w [, <b>float</b> h [, <b>string</b> type [, <b>mixed</b> link]]]]]])</code>
+<h2>Descrizione</h2>
+Permette di inserire un immagine nella pagina. Le dimensioni possono essere specificate nei seguenti modi:
+<UL>
+<LI>specificando larghezza e altezza (espresse nell'unità di misura scelte)
+<LI>specificando una sola dimensione, l'altra sarà calcolata automaticamente in maniera da mantenere le proporzioni originali
+<LI>senza specificare le dimensioni, in questo caso l'immagine sarà inserita a 72 dpi
+</UL>
+I formati inseribili sono JPEG, PNG e GIF. Per il supporto al formato GIF è richiesta l'estensione GD.
+<BR>
+<BR>
+Per le JPEG, sono consentiti i seguenti colori:
+<UL>
+<LI>scala di grigio
+<LI>true colors (24 bits)
+<LI>CMYK (32 bits)
+</UL>
+Per le PNG, sono consentiti:
+<UL>
+<LI>scala di grigio a 8 bits (256 livelli)
+<LI>indexed colors
+<LI>true colors (24 bits)
+</UL>
+ma non sono supportati:
+<UL>
+<LI>interlacciamento
+<LI>canale alpha
+</UL>
+Nel caso di GIF animata, verrà utilizzato solo il primo frame.<BR>
+<BR>
+Può essere presente un colore trasparente.<BR>
+<BR>
+Se il formato dell'immagine non viene specificato sarà preso dall'estensione del file.<BR>
+E' possibile inserire un link sull'immagine.<BR>
+<BR>
+Osservazione: se un immagine è usata più volte, solo una copia sarà inserita nel file.
+<h2>Parametri</h2>
+<dl class="param">
+<dt><code>file</code></dt>
+<dd>
+Nome del file che contiene l'immagine.
+</dd>
+<dt><code>x</code></dt>
+<dd>
+Ascissa dell'angolo superiore-sinistro. Se non specificata o pari a <TT>null</TT>, viene utilizzata
+l'ascissa corrente.
+</dd>
+<dt><code>y</code></dt>
+<dd>
+Ordinata dell'angolo superiore-sinistro. Se non specificata o pari a <TT>null</TT>, viene utilizzata
+l'ordinata corrente; inoltre, se necessario, prima viene inserita un'interruzione di pagina (in caso
+fosse abilita l'interruzione di pagina automatica) e, dopo la chiamata, le coordinate correnti vengono
+spostate al di sotto dell'immagine.
+</dd>
+<dt><code>w</code></dt>
+<dd>
+Larghezza dell'immagine nella pagina. Se non viene specificata o uguale a zero, sarà calcolata automaticamente.
+</dd>
+<dt><code>h</code></dt>
+<dd>
+Altezza dell'immagine nella pagina. Se non viene specificata o uguale a zero, sarà calcolata automaticamente.
+</dd>
+<dt><code>type</code></dt>
+<dd>
+Formato immagine. I valori possibili sono (case insensitive): <TT>JPG</TT>, <TT>JPEG</TT>, <TT>PNG</TT> e
+<TT>GIF</TT>.
+Se non specificato, il tipo sarà riferito all'estensione del file.
+</dd>
+<dt><code>link</code></dt>
+<dd>
+URL o identificatore generato da AddLink().
+</dd>
+</dl>
+<h2>Vedi anche</h2>
+<a href="addlink.htm">AddLink()</a>.
+<hr style="margin-top:1.5em">
+<div style="text-align:center"><a href="index.htm">Indice</a></div>
+</body>
+</html>

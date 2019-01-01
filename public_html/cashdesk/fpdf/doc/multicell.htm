@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>MultiCell</title>
+<link type="text/css" rel="stylesheet" href="../fpdf.css">
+</head>
+<body>
+<h1>MultiCell</h1>
+<code>MultiCell(<b>float</b> w, <b>float</b> h, <b>string</b> txt [, <b>mixed</b> border [, <b>string</b> align [, <b>boolean</b> fill]]])</code>
+<h2>Descrizione</h2>
+Questo metodo permette di stampare del testo con interruzioni di linea. Possono essere automatiche
+(non appena il testo raggiunge il margine destro della cella) o esplicite (tramite il carattere \n).
+Vengono inserite tante celle quante necessarie, una sotto l'altra.
+<BR>
+Il testo può essere allineato, centrato o giustificato. E' possibile inserire i bordi e lo sfondo al
+blocco di celle.
+<h2>Parametri</h2>
+<dl class="param">
+<dt><code>w</code></dt>
+<dd>
+Larghezza delle celle. Se <TT>0</TT>, si estendono dalla parte del margine destro della pagina.
+</dd>
+<dt><code>h</code></dt>
+<dd>
+Altezza delle celle.
+</dd>
+<dt><code>txt</code></dt>
+<dd>
+Stringa da stampare.
+</dd>
+<dt><code>border</code></dt>
+<dd>
+Indica se bisogna disegnare i bordi attorno al blocco di celle. Il valore può essere sia un numero:
+<UL>
+<LI><TT>0</TT>: nessun bordo
+<LI><TT>1</TT>: cornice
+</UL>
+o una stringa contenente alcuni o tutti i seguenti caratteri (in qualsiasi ordine):
+<UL>
+<LI><TT>L</TT>: sinistro
+<LI><TT>T</TT>: superiore
+<LI><TT>R</TT>: destro
+<LI><TT>B</TT>: inferiore
+</UL>
+Valore di default: <TT>0</TT>.
+</dd>
+<dt><code>align</code></dt>
+<dd>
+Imposta l'allineamento del testo. Possibili valori sono:
+<UL>
+<LI><TT>L</TT>: allineamento a sinistra
+<LI><TT>C</TT>: centrato
+<LI><TT>R</TT>: allienamento a destra
+<LI><TT>J</TT>: giustificazione (valore di default)
+</UL>
+</dd>
+<dt><code>fill</code></dt>
+<dd>
+Indica se lo sfondo della cella deve essere disegnato (<TT>true</TT>) o deve essere
+trasparente (<TT>false</TT>).
+Valore di default: <TT>false</TT>.
+</dd>
+</dl>
+<h2>Vedi anche</h2>
+<a href="setfont.htm">SetFont()</a>,
+<a href="setdrawcolor.htm">SetDrawColor()</a>,
+<a href="setfillcolor.htm">SetFillColor()</a>,
+<a href="settextcolor.htm">SetTextColor()</a>,
+<a href="setlinewidth.htm">SetLineWidth()</a>,
+<a href="cell.htm">Cell()</a>,
+<a href="write.htm">Write()</a>,
+<a href="setautopagebreak.htm">SetAutoPageBreak()</a>.
+<hr style="margin-top:1.5em">
+<div style="text-align:center"><a href="index.htm">Indice</a></div>
+</body>
+</html>
