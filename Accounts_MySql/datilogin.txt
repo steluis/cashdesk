@@ -1,0 +1,23 @@
+<?
+/*******************************************************************************
+* CASH DESK - LOGIN DATA                                                       *
+*                                                                              *
+* Version: 1.0                                                                 *
+* Date:    21.11.2018                                                          *
+* Author:  Stefano Luise                                                       *
+*******************************************************************************/
+$serverdb="localhost";
+$passworddb="cashdesksql";
+$userdb="cashdesksql";
+
+$basedb="cashdesk";
+
+// Connessione al Data Base
+$link=mysqli_connect($serverdb,$userdb,$passworddb) 
+ or die("Non riesco a connettermi a <b>$serverdb"); 
+// Selezione del data base
+mysqli_select_db ($link,$basedb) 
+ or die ("Non riesco a selezionare il db $basedb<br>");
+
+
+?>
